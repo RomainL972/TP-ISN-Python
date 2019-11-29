@@ -28,6 +28,9 @@ def geometricSuite(u, q, count=10):
 def toBinary(number):
     base = 2
     result = ""
+    if(number < 0):
+        number = abs(number)
+        result += "-"
     test = 1
     while (test*base) <= number:
         test *= base
@@ -44,7 +47,7 @@ def toBinary(number):
 def arrayToStr(array):
     string = ""
     for i in range(len(array)):
-        if(i == len(array)-1): string += " et "
+        if(i == len(array)-1 and i != 0): string += " et "
         elif(i != 0): string += ", "
         string += str(array[i])
     return string
