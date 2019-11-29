@@ -7,18 +7,24 @@ def showSubWindow(button):
     app.showSubWindow(button)
 
 def exo1_exec():
-    num1 = int(app.getEntry("one_num1"))
-    num2 = int(app.getEntry("one_num2"))
-    if(utils.divisible(num1, num2)):
-        app.setLabel("one_result", str(num1)+" est divisible par "+str(num2))
-    else:
-        app.setLabel("one_result", str(num1)+" n'est pas divisible par "+str(num2))
+    try:
+        num1 = int(app.getEntry("one_num1"))
+        num2 = int(app.getEntry("one_num2"))
+        if(utils.divisible(num1, num2)):
+            app.setLabel("one_result", str(num1)+" est divisible par "+str(num2))
+        else:
+            app.setLabel("one_result", str(num1)+" n'est pas divisible par "+str(num2))
+    except TypeError:
+        app.setLabel("one_result", "Un champ est vide!")
 
 def exo2_exec():
-    num = int(app.getEntry("two_num"))
-    result = utils.divisors(num)
-    resultStr = utils.arrayToStr(result)
-    app.setLabel("two_result", resultStr)
+    try:
+        num = int(app.getEntry("two_num"))
+        result = utils.divisors(num)
+        resultStr = utils.arrayToStr(result)
+        app.setLabel("two_result", resultStr)
+    except TypeError:
+        app.setLabel("two_result", "Un champ est vide!")
 
 def exo3_exec():
     result = utils.evenNumbers()
@@ -26,16 +32,22 @@ def exo3_exec():
     app.setLabel("three_result", resultStr)
 
 def exo4_exec():
-    u = int(app.getEntry("four_num1"))
-    q = int(app.getEntry("four_num2"))
-    result = utils.geometricSuite(u, q)
-    resultStr = utils.arrayToStr(result)
-    app.setLabel("four_result", resultStr)
+    try:
+        u = int(app.getEntry("four_num1"))
+        q = int(app.getEntry("four_num2"))
+        result = utils.geometricSuite(u, q)
+        resultStr = utils.arrayToStr(result)
+        app.setLabel("four_result", resultStr)
+    except TypeError:
+        app.setLabel("four_result", "Un champ est vide!")
 
 def exo5_exec():
-    num = int(app.getEntry("five_num"))
-    result = utils.toBinary(num)
-    app.setLabel("five_result", str(num)+" en binaire fait "+result)
+    try:
+        num = int(app.getEntry("five_num"))
+        result = utils.toBinary(num)
+        app.setLabel("five_result", str(num)+" en binaire fait "+result)
+    except TypeError:
+        app.setLabel("five_result", "Un champ est vide!")
 
 #Main Windows
 app.addLabel("title", "Quel exercice voulez-vous tester?")
