@@ -1,5 +1,5 @@
-# tp-isn-python
-Mon TP Python en ISN
+# TP Python ISN
+Mon TP Python en ISN. Contient 5 exercices, utilisable en ligne de commande ou avec interface graphique.
 
 ## Dépendances
 Ce projet nécessite python ainsi que la librairie graphique appJar. Vous pouvez
