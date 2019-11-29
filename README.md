@@ -1,5 +1,12 @@
-# tp-isn-python
-Mon TP Python en ISN
+# TP Python ISN
+Mon TP Python en ISN. Contient 5 exercices, utilisable en ligne de commande ou avec interface graphique.
+
+## Téléchargement
+Si vous avez git, vous pouvez cloner le répertoire avec la commande suivante:
+```
+git clone https://github.com/RomainL972/tp-isn-python
+```
+Sinon, vous pouvez récupérer une archive zip avec [ce lien](https://github.com/RomainL972/tp-isn-python/archive/master.zip)
 
 ## Dépendances
 Ce projet nécessite python ainsi que la librairie graphique appJar. Vous pouvez
