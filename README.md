@@ -16,6 +16,13 @@ appJar en utilisant la commande suivante:
 pip install -r requirements.txt
 ```
 
+## Tests
+Vous pouvez lancer les tests avec la commande :
+```
+python -m unittest
+```
+
 ## Utilisation
 Vous pouvez lancer l'interface graphique avec `python gui.py` et l'interface en
  ligne de commande avec `python cli.py`.
+
