@@ -1,14 +1,15 @@
 import unittest
 import utils
 
+
 class UtilsTest(unittest.TestCase):
 
     """Test case utilisé pour tester les fonctions du module utils"""
 
     def test_divisible(self):
         """Teste le fonctionnement de la fonction 'utils.divisible'."""
-        self.assertTrue(utils.divisible(10,2))
-        self.assertFalse(utils.divisible(8,3))
+        self.assertTrue(utils.divisible(10, 2))
+        self.assertFalse(utils.divisible(8, 3))
 
         with self.assertRaises(TypeError):
             utils.divisible(5)
@@ -32,8 +33,8 @@ class UtilsTest(unittest.TestCase):
 
     def test_evenNumbers(self):
         """Teste le fonctionnement de la fonction 'utils.evenNumbers'."""
-        self.assertEqual(utils.evenNumbers(), list(range(0,100,2)))
-        self.assertEqual([2,4,6,8], utils.evenNumbers(2,9))
+        self.assertEqual(utils.evenNumbers(), list(range(0, 100, 2)))
+        self.assertEqual([2, 4, 6, 8], utils.evenNumbers(2, 9))
 
         with self.assertRaises(TypeError):
             utils.divisors(5, 4, 4)
@@ -42,8 +43,9 @@ class UtilsTest(unittest.TestCase):
 
     def test_geometricSuite(self):
         """Teste le fonctionnement de la fonction 'utils.geometricSuite'."""
-        self.assertEqual(utils.geometricSuite(2,2), [2,4,8,16,32,64,128,256,512,1024])
-        self.assertEqual(utils.geometricSuite(5,5,3), [5,25,125])
+        self.assertEqual(utils.geometricSuite(2, 2),
+                         [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024])
+        self.assertEqual(utils.geometricSuite(5, 5, 3), [5, 25, 125])
 
         with self.assertRaises(TypeError):
             utils.divisors()

@@ -15,21 +15,21 @@ if(exo == 1):
     num1 = int(input("Nombre 1 : "))
     num2 = int(input("Nombre 2 : "))
     if(utils.divisible(num1, num2)):
-        print(num1,"est divisible par",num2)
+        print(num1, "est divisible par", num2)
     else:
-        print(num1,"n'est pas divisible par",num2)
+        print(num1, "n'est pas divisible par", num2)
 elif(exo == 2):
     num = int(input("Nombre : "))
     result = utils.arrayToStr(utils.divisors(num))
-    print("Les diviseurs de",num,"sont",result)
+    print("Les diviseurs de", num, "sont", result)
 elif(exo == 3):
     result = utils.arrayToStr(utils.evenNumbers())
-    print("Les nombres pairs inférieurs à 100 sont",result)
+    print("Les nombres pairs inférieurs à 100 sont", result)
 elif(exo == 4):
     u = int(input("u(0) : "))
     q = int(input("q : "))
     result = utils.arrayToStr(utils.geometricSuite(u, q))
-    print("Les dix premiers termes de cette suite sont",result)
+    print("Les dix premiers termes de cette suite sont", result)
 else:
     num = int(input("Nombre : "))
-    print(num,"en binaire fait",utils.toBinary(num))
+    print(num, "en binaire fait", utils.toBinary(num))
